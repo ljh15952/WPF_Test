@@ -8,15 +8,73 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid Margin="20">
 
-        <StackPanel>
-            
-            <TextBlock Text="input name" FontSize="16" Margin="0,0,0,10"/>
-            <TextBox x:Name="txtName" Height="30" Margin="0,0,0,10"/>
-            
-            <Button Content="HI" Height="35" Click="Button_Click" Margin="0,0,0,20"/>
-            
-            <TextBlock x:Name="txtResult" FontSize="18"/>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <TextBlock
+            Grid.Row="0" 
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Text="使用者登録"
+            FontSize="24"
+            FontWeight="Bold"
+            Margin="0,0,0,20"/>
+        
+        <TextBlock
+            Grid.Row="1"
+            Grid.Column="0"
+            Text="Name:"
+            VerticalAlignment="Center"
+            Margin="5"/>
+        
+        <TextBox
+            Grid.Row="1"
+            Grid.Column="1"
+            Height="30"
+            Margin="5"/>
+        
+        <TextBlock
+            Grid.Row="2"
+            Grid.Column="0"
+            Text="Email:"
+            VerticalAlignment="Center"
+            Margin="5"/>
+        
+        <ComboBox
+            Grid.Row="3"
+            Grid.Column="1"
+            Height="30"
+            Margin="5"/>
+
+        <StackPanel
+            Grid.Row="4"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Orientation="Horizontal"
+            HorizontalAlignment="Right"
+            Margin="0,20,0,0">
+
+            <Button
+                Content="登録"
+                Width="80"
+                Height="30"
+                Margin="5"/>
+
+            <Button
+                Content="キャンセル"
+                Width="80"
+                Height="30"
+                Margin="5"/>
         </StackPanel>
         
     </Grid>
